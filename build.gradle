@@ -25,9 +25,17 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    compile("io.pivotal.spring.cloud:spring-cloud-services-cloudfoundry-connector:1.4.1.RELEASE")
     testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
 }
 
+bootRun.environment([
+        "welcome.message": "hello test"
+])
+
+test.environment([
+        "WELCOME_MESSAGE": "Hello from test",
+])
 
 
 defaultTasks "tasks"
