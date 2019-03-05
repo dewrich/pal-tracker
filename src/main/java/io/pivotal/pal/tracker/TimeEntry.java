@@ -77,23 +77,4 @@ public class TimeEntry {
         return Objects.hash(id, projectId, userId, date, hours);
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setProjectId(long projectId) {
-        this.projectId = projectId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
 }
