@@ -1,0 +1,10 @@
+
+$ cf env pal-tracker
+
+# Start the SSH tunnel
+$ cf ssh -N -L 63306:q-n3s3y1.q-g44326.bosh:3306 pal-tracker
+
+# use the env settings for user/password
+# NOTE: be sure to use the 127.0.0.1 as the hostname because MySQL has the
+# database only allows connectivity from 127.0.0.1 (NO localhost)
+$ mysql -u 5b2771b0e5d34bbfb049162232339930 -p -h 127.0.0.1 -P 63306
